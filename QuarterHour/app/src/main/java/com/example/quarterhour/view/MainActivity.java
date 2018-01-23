@@ -1,5 +1,6 @@
 package com.example.quarterhour.view;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -17,6 +18,7 @@ import com.example.quarterhour.base.BaseActivity;
 import com.example.quarterhour.view.fragment.Fragment_duanzi;
 import com.example.quarterhour.view.fragment.Fragment_shipin;
 import com.example.quarterhour.view.fragment.Fragment_tuijian;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -27,6 +29,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private RadioButton radio_duanzi;
     private RadioButton radio_shipin;
     private RadioButton radio_tuijian;
+    private SimpleDraweeView simple;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         radio_duanzi = findViewById(R.id.radio_duanzi);
         radio_shipin = findViewById(R.id.radio_shipin);
         radio_tuijian = findViewById(R.id.radio_tuijian);
+        simple = findViewById(R.id.simple_icon);
     }
 
     @Override
@@ -53,6 +57,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         radio_duanzi.setOnClickListener(this);
         radio_shipin.setOnClickListener(this);
         radio_tuijian.setOnClickListener(this);
+        simple.setImageURI(Uri.parse("https://www.zhaoapi.cn/images/quarter/ad1.png"));
 
     }
 

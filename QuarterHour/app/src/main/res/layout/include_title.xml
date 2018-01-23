@@ -11,13 +11,14 @@
         android:background="@color/titlebar"
         >
 
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_margin="10dp"
             android:id="@+id/simple_icon"
-            android:src="@mipmap/ic_launcher"
+            fresco:roundAsCircle="true"
+            fresco:placeholderImage="@mipmap/ic_launcher"
             />
         <TextView
             android:layout_width="match_parent"
