@@ -10,13 +10,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/relative"
-        android:background="#556644"
         >
-        <include layout="@layout/include_title"></include>
+        <include layout="@layout/include_title"
+            android:id="@+id/inclu_title"
+            ></include>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/radiogroup"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            >
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:button="@null"
+                android:id="@+id/radio_tuijian"
+                android:layout_weight="1"
+                android:background="@drawable/selector_tuijian"
+                android:checked="true"
+                />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:button="@null"
+                android:id="@+id/radio_duanzi"
+                android:layout_weight="1"
+                android:background="@drawable/selector_duanzi"
+                />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:button="@null"
+                android:id="@+id/radio_shipin"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shipin"
+                />
+
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rela"
+            android:layout_below="@id/inclu_title"
+            android:layout_above="@id/radiogroup"
+            ></RelativeLayout>
+
+
+
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="150dp"
+        android:layout_width="380dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
         android:background="#fff000"

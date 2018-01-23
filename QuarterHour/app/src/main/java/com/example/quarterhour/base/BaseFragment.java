@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-
 public abstract class BaseFragment extends Fragment {
     protected Activity mActivity;
 
@@ -26,7 +25,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container
             , Bundle savedInstanceState) {
 
-        View view = LayoutInflater.from(mActivity).inflate(getLayoutId(), null, false);
+        View view = LayoutInflater.from(mActivity).inflate(getLayoutId(), container, false);
         initView(view, savedInstanceState);
 
         return view;
