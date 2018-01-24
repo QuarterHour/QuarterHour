@@ -2,7 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00ff00"
-    >
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <android.support.design.widget.TabLayout
+        android:id="@+id/toolbar_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextAppearance="@android:style/TextAppearance.Holo.Large"
+        app:tabIndicatorColor="#29B6F6"
+        app:tabIndicatorHeight="6dp"
+        app:tabMode="fixed"
+        app:tabPaddingStart="100dp"
+        app:tabPaddingEnd="100dp"
+        app:tabPaddingBottom="10dp"
+        app:tabSelectedTextColor="#29B6F6"
+        app:tabTextColor="#ced0d3">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_remen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="关注" />
+
+
+    </android.support.design.widget.TabLayout>
+
+   <android.support.v4.view.ViewPager
+      android:id="@+id/pager_tuijian"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+
+    
 </LinearLayout>
