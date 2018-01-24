@@ -81,7 +81,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     public void initData() {
         getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_tuijian()).commit();
-
         radio_duanzi.setOnClickListener(this);
         radio_shipin.setOnClickListener(this);
         radio_tuijian.setOnClickListener(this);
