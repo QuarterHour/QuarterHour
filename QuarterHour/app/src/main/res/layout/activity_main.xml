@@ -61,17 +61,30 @@
             ></RelativeLayout>
 
 
-
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="380dp"
+    <RelativeLayout
+        android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
-        android:background="#fff000"
+        android:background="@color/list_yejian"
         android:id="@+id/linear"
         android:orientation="vertical"
-        ></LinearLayout>
+        >
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_view"
+            android:divider="@null"
+            />
+
+        <include layout="@layout/include_draw_below"
+            android:id="@+id/inclu_title"
+           ></include>
+
+
+    </RelativeLayout>
 
 
 
