@@ -1,6 +1,7 @@
 package com.example.quarterhour.appliction;
 
 import android.app.Application;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 
@@ -13,5 +14,6 @@ public class Myapplication extends Application{
     public void onCreate() {
         super.onCreate();
         Fresco.initialize(this);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 }
