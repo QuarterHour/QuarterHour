@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/ic_backgroud"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/cehua_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image_touxiang"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            fresco:placeholderImage="@mipmap/qqqq"
+            android:layout_marginLeft="15dp"
+            fresco:roundAsCircle="true"
+            />
+        <TextView
+            android:id="@+id/cehua_name"
+            android:layout_toRightOf="@+id/image_touxiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="波霸"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"/>
+
+        <ImageView
+            android:id="@+id/cehua_image_xingbie"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/nv"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="编辑个性签名"
+        android:textColorHint="#ffffff"
+        android:layout_marginLeft="20dp"/>
+
+</LinearLayout>

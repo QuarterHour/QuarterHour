@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/cehua_image_tubiao"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/xin"
+        />
+
+    <TextView
+
+        android:layout_marginTop="20dp"
+        android:id="@+id/cehua_text"
+        android:layout_toRightOf="@+id/cehua_image_tubiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的关注"
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="25dp"/>
+
+    <ImageView
+
+        android:layout_marginTop="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/jinru"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        />
+
+</RelativeLayout>

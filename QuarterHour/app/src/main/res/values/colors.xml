@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="titlebar">#03A9F4</color>
+    <color name="cehua_fontcolor">#000</color>
+    <color name="list_yejian">#ffffff</color>
 </resources>
