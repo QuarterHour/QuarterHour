@@ -10,10 +10,15 @@ import com.facebook.drawee.backends.pipeline.Fresco;
  */
 
 public class Myapplication extends Application{
+
+    public static boolean isnight=false;
     @Override
     public void onCreate() {
         super.onCreate();
         Fresco.initialize(this);
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
     }
 }

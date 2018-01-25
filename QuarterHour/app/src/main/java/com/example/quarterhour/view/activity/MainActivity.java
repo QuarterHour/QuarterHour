@@ -1,10 +1,8 @@
-package com.example.quarterhour.view;
+package com.example.quarterhour.view.activity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatDelegate;
@@ -13,13 +11,11 @@ import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quarterhour.R;
@@ -29,15 +25,11 @@ import com.example.quarterhour.base.BaseActivity;
 import com.example.quarterhour.view.fragment.Fragment_duanzi;
 import com.example.quarterhour.view.fragment.Fragment_shipin;
 import com.example.quarterhour.view.fragment.Fragment_tuijian;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.suke.widget.SwitchButton;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.Bind;
-import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -52,7 +44,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private SimpleDraweeView cebian;
     private ListView listView;
     private SwitchButton switchButton;
-    private boolean isheiye=false;
+    private ImageView imageView_heiye;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +70,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         cebian = findViewById(R.id.simple_icon);
         listView = findViewById(R.id.list_view);
         switchButton = findViewById(R.id.switch_button);
+        imageView_heiye = findViewById(R.id.image_heiye);
+
 
     }
 
@@ -140,8 +136,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         listView.setAdapter(adapter);
 
         //夜间模式
+        switchButton.setChecked(Myapplication.isnight);
 
-       switchButton.setChecked(Myapplication.isnight);
 
         switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
             @Override
@@ -151,11 +147,46 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     Myapplication.isnight=true;
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
-                    System.out.println(isChecked);
                 }else {
                     Myapplication.isnight=false;
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    switchButton.setChecked(false);
+                }
+            }
+        });
+        if (switchButton.isChecked() == true){
+            imageView_heiye.setImageResource(R.mipmap.yueliang_true);
+        }else {
+            imageView_heiye.setImageResource(R.mipmap.yueliang_false);
+        }
+
+
+        //listview 条目点击事件
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //基本信息
+                if (position == 0){
+                    Toast.makeText(MainActivity.this,"基本信息",Toast.LENGTH_SHORT).show();
+                }
+
+                //我的关注
+                if (position == 1){
+                    Toast.makeText(MainActivity.this,"我的关注",Toast.LENGTH_SHORT).show();
+                }
+
+                //我的收藏
+                if (position == 2){
+                    Toast.makeText(MainActivity.this,"我的收藏",Toast.LENGTH_SHORT).show();
+                }
+
+                //搜索好友
+                if (position == 3){
+                    Toast.makeText(MainActivity.this,"搜索好友",Toast.LENGTH_SHORT).show();
+                }
+
+                //消息通知
+                if (position == 4){
+                    Toast.makeText(MainActivity.this,"消息通知",Toast.LENGTH_SHORT).show();
                 }
             }
         });
