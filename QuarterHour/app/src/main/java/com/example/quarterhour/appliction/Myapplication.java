@@ -18,10 +18,13 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class Myapplication extends Application{
     public static IInterface iInterface;
+
+    public static boolean isnight=false;
     @Override
     public void onCreate() {
         super.onCreate();
         Fresco.initialize(this);
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://www.zhaoapi.cn/")
@@ -31,5 +34,7 @@ public class Myapplication extends Application{
                 .client(OkhttpUtils.getInstance())
                 .build();
         iInterface = retrofit.create(IInterface.class);
+
+
     }
 }
