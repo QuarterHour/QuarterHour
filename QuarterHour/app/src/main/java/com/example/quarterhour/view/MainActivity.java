@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.quarterhour.R;
 import com.example.quarterhour.adapter.MyCehuaAdapter;
+import com.example.quarterhour.appliction.Myapplication;
 import com.example.quarterhour.base.BaseActivity;
 import com.example.quarterhour.view.fragment.Fragment_duanzi;
 import com.example.quarterhour.view.fragment.Fragment_shipin;
@@ -140,18 +141,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         //夜间模式
 
-
+       switchButton.setChecked(Myapplication.isnight);
 
         switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(SwitchButton view, boolean isChecked) {
 
                 if (isChecked){
+                    Myapplication.isnight=true;
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
                     System.out.println(isChecked);
                 }else {
-
+                    Myapplication.isnight=false;
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     switchButton.setChecked(false);
                 }
