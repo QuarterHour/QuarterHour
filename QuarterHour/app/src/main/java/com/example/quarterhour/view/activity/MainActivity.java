@@ -1,8 +1,11 @@
 package com.example.quarterhour.view.activity;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatDelegate;
@@ -162,29 +165,29 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //基本信息
-                if (position == 0){
-                    Toast.makeText(MainActivity.this,"基本信息",Toast.LENGTH_SHORT).show();
-                }
 
                 //我的关注
                 if (position == 1){
-                    Toast.makeText(MainActivity.this,"我的关注",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, GuanzhuActivity.class);
+                    startActivity(intent);
                 }
 
                 //我的收藏
                 if (position == 2){
-                    Toast.makeText(MainActivity.this,"我的收藏",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, CollectActivity.class);
+                    startActivity(intent);
                 }
 
                 //搜索好友
                 if (position == 3){
-                    Toast.makeText(MainActivity.this,"搜索好友",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, SouActivity.class);
+                    startActivity(intent);
                 }
 
                 //消息通知
                 if (position == 4){
-                    Toast.makeText(MainActivity.this,"消息通知",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+                    startActivity(intent);
                 }
             }
         });
@@ -198,15 +201,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (view.getId()){
             case R.id.radio_duanzi :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_duanzi()).commit();
-                Log.i("--------","哈哈");
+
                 break;
             case R.id.radio_shipin :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_shipin()).commit();
-                Log.i("--------","哈哈2");
+
                 break;
             case R.id.radio_tuijian :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_tuijian()).commit();
-                Log.i("--------","哈哈3");
+
                 break;
 
         }
