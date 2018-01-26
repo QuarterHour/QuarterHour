@@ -6,4 +6,5 @@
     <color name="titlebar">#03A9F4</color>
     <color name="cehua_fontcolor">#000</color>
     <color name="list_yejian">#ffffff</color>
+    <color name="login_text">#ffffff</color>
 </resources>

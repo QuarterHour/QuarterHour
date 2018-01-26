@@ -1,6 +1,7 @@
 package com.example.quarterhour.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quarterhour.R;
+import com.example.quarterhour.view.activity.LoginActivity;
+import com.example.quarterhour.view.activity.MainActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
@@ -67,8 +70,9 @@ public class MyCehuaAdapter extends BaseAdapter {
                 holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(context, "基本信息", Toast.LENGTH_SHORT).show();
-
+                        //跳转到登录页面
+                        Intent intent = new Intent(context, LoginActivity.class);
+                        context.startActivity(intent);
                     }
                 });
             }
