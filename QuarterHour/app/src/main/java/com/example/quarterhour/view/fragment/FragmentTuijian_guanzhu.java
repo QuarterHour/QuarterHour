@@ -1,28 +1,11 @@
 package com.example.quarterhour.view.fragment;
 
-import android.os.Bundle;
-import android.view.View;
-
-import com.example.quarterhour.R;
-import com.example.quarterhour.base.BaseFragment;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by acer on 2018/1/24.
  */
 
-public class FragmentTuijian_guanzhu extends BaseFragment{
-    @Override
-    protected int getLayoutId() {
-        return R.layout.fragmenttuijianguanzhu;
-    }
+public class FragmentTuijian_guanzhu extends Fragment{
 
-    @Override
-    protected void initView(View view, Bundle savedInstanceState) {
-
-    }
-
-    @Override
-    protected void initData() {
-
-    }
 }

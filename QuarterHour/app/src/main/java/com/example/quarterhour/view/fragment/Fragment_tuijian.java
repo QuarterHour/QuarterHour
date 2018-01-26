@@ -1,6 +1,5 @@
 package com.example.quarterhour.view.fragment;
 
-import android.content.pm.PermissionGroupInfo;
 import android.os.Bundle;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
@@ -9,10 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.example.quarterhour.R;
 import com.example.quarterhour.base.BaseFragment;
@@ -54,8 +50,8 @@ public class Fragment_tuijian extends BaseFragment{
         pageList.add("热门");
         pageList.add("关注");
         tuijianList = new ArrayList<>();
-        tuijianList.add(new FragmentTuijian_guanzhu());
         tuijianList.add(new FragmentTuijian_remen());
+        tuijianList.add(new FragmentTuijian_guanzhu());
         pager_tuijian.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
