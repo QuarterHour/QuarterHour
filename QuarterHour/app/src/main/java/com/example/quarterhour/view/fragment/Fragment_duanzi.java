@@ -15,6 +15,7 @@ import com.example.quarterhour.duan.bean.DuanBean;
 import com.example.quarterhour.duan.presenter.Duanpresenter;
 import com.example.quarterhour.duan.utils.DividerItemDecoration;
 import com.example.quarterhour.duan.view.DView;
+import com.example.quarterhour.view.activity.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,6 +90,7 @@ public class Fragment_duanzi extends BaseFragment implements DView{
     protected void initData() {
         Duanpresenter duanpresenter=new Duanpresenter(this);
         duanpresenter.getliedata();
+        MainActivity.textView.setText("段子");
     }
 
     @Override

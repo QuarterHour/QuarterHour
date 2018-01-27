@@ -16,12 +16,15 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quarterhour.R;
+import com.example.quarterhour.ZuoPinActivity;
 import com.example.quarterhour.adapter.MyCehuaAdapter;
 import com.example.quarterhour.appliction.Myapplication;
 import com.example.quarterhour.base.BaseActivity;
@@ -48,6 +51,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ListView listView;
     private SwitchButton switchButton;
     private ImageView imageView_heiye;
+    private LinearLayout linearLayout;
+    private LinearLayout cehua_wodezuopin;
+    private LinearLayout cehua_shezhi;
+    public static TextView textView;
 
 
     @Override
@@ -74,6 +81,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         listView = findViewById(R.id.list_view);
         switchButton = findViewById(R.id.switch_button);
         imageView_heiye = findViewById(R.id.image_heiye);
+        cehua_wodezuopin = findViewById(R.id.cehua_wodezuopin);
+        cehua_shezhi = findViewById(R.id.cehua_shezhi);
+        textView = findViewById(R.id.in_title);
 
 
     }
@@ -191,6 +201,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     Intent intent = new Intent(MainActivity.this, MessageActivity.class);
                     startActivity(intent);
                 }
+            }
+        });
+
+        cehua_shezhi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ShezhiActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cehua_wodezuopin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ZuoPinActivity.class);
+                startActivity(intent);
             }
         });
 

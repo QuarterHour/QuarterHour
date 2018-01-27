@@ -12,9 +12,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".appliction.Myapplication"
         android:allowBackup="true"
@@ -65,7 +65,9 @@
             android:name="UMENG_APPKEY"
             android:value="5a695276b27b0a4f6b0000c2" />
 
-        <activity android:name=".view.activity.QitaLoginActivity"></activity>
+        <activity android:name=".view.activity.QitaLoginActivity" />
+        <activity android:name=".view.activity.ShezhiActivity" />
+        <activity android:name=".ZuoPinActivity"></activity>
     </application>
 
 </manifest>
