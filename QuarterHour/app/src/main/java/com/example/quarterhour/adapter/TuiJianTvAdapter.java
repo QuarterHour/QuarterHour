@@ -34,14 +34,11 @@ public class TuiJianTvAdapter extends RecyclerView.Adapter<TuiJianTvAdapter.TuiJ
         this.context = context;
         this.data1 = data1;
     }
-
     @Override
     public TuiJianTvViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.tuijiantvitem, parent, false);
         return new TuiJianTvViewHolder(view);
     }
-
-
     @Override
     public void onBindViewHolder(TuiJianTvViewHolder holder, int position) {
 
@@ -91,8 +88,6 @@ public class TuiJianTvAdapter extends RecyclerView.Adapter<TuiJianTvAdapter.TuiJ
         holder.videoplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
 
 
             }
