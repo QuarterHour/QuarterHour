@@ -225,6 +225,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.radio_duanzi :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_duanzi()).commit();
                 textView.setText("段子");
+                //收到
                 break;
             case R.id.radio_shipin :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_shipin()).commit();
