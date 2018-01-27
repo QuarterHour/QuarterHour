@@ -68,6 +68,13 @@
         <activity android:name=".view.activity.QitaLoginActivity" />
         <activity android:name=".view.activity.ShezhiActivity" />
         <activity android:name=".ZuoPinActivity"></activity>
+        <activity android:name=".view.activity.QitaLoginActivity"></activity>
+
+
+        <activity
+            android:name=".guo.model.activity.BoFanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape"-->
     </application>
 
 </manifest>

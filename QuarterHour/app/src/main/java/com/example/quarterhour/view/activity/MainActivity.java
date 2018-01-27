@@ -1,15 +1,12 @@
 package com.example.quarterhour.view.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatDelegate;
-import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
@@ -81,9 +78,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         listView = findViewById(R.id.list_view);
         switchButton = findViewById(R.id.switch_button);
         imageView_heiye = findViewById(R.id.image_heiye);
-        cehua_wodezuopin = findViewById(R.id.cehua_wodezuopin);
-        cehua_shezhi = findViewById(R.id.cehua_shezhi);
-        textView = findViewById(R.id.in_title);
 
 
     }

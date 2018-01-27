@@ -19,7 +19,7 @@ public class LoggingInterceptor implements Interceptor {
         Response response = null;
         Request requestProcess = null ;
         if("GET".equals(request.method())){
-            String url =  request.url().toString() + "&source=android";
+            String url =  request.url().toString();
             Request.Builder builder =  request.newBuilder() ;
             builder.get().url(url);
             requestProcess =  builder.build();
@@ -32,15 +32,11 @@ public class LoggingInterceptor implements Interceptor {
                 for (int i=0;i<formBody.size();i++){
                     builder.add(formBody.encodedName(i),formBody.encodedValue(i));
                 }
-                builder.add("source","android");
-                builder.add("token","appVersion");
+
             }
             requestProcess =  request.newBuilder().url(request.url().toString()).post(builder.build()).build() ;
             response = chain.proceed(requestProcess);
         }
-
-
-
 
         return response;
     }
