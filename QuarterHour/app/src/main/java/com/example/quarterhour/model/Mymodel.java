@@ -1,13 +1,10 @@
 package com.example.quarterhour.model;
 
 
-import android.util.Log;
-
 import com.example.quarterhour.model.bean.LunBoBean;
 import com.example.quarterhour.model.bean.TuiJianTvBean;
 import com.example.quarterhour.present.MyPresentCallback;
 import com.example.quarterhour.utils.InternetUtil;
-import com.example.quarterhour.view.MyViewCallback;
 
 import java.util.HashMap;
 import java.util.Map;

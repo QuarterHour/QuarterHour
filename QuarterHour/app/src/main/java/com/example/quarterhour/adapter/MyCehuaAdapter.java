@@ -8,11 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.quarterhour.R;
 import com.example.quarterhour.view.activity.LoginActivity;
-import com.example.quarterhour.view.activity.MainActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;

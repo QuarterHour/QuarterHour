@@ -66,6 +66,12 @@
             android:value="5a695276b27b0a4f6b0000c2" />
 
         <activity android:name=".view.activity.QitaLoginActivity"></activity>
+
+
+        <activity
+            android:name=".guo.model.activity.BoFanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape"-->
     </application>
 
 </manifest>

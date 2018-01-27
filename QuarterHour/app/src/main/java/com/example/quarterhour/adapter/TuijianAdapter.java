@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.quarterhour.MyItemDecoration;
 import com.example.quarterhour.R;
 import com.example.quarterhour.model.bean.LunBoBean;
 import com.example.quarterhour.model.bean.TuiJianTvBean;

@@ -3,7 +3,6 @@ package com.example.quarterhour.view.fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import com.example.quarterhour.R;
@@ -14,9 +13,6 @@ import com.example.quarterhour.model.bean.TuiJianTvBean;
 import com.example.quarterhour.present.Mypresent;
 import com.example.quarterhour.view.MyViewCallback;
 import com.example.quarterhour.view.Myviewback;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by acer on 2018/1/24.
