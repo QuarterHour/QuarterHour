@@ -55,7 +55,7 @@ public class Fragment_tuijian extends BaseFragment{
         pageList.add("关注");
         tuijianList = new ArrayList<>();
         tuijianList.add(new FragmentTuijian_remen());
-        tuijianList.add(new FragmentTuijian_guanzhu());
+        tuijianList.add(new FragmentTuijian_remen());
         pager_tuijian.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {

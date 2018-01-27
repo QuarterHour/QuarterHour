@@ -45,13 +45,10 @@ public class FragmentTuijian_remen extends BaseFragment implements MyViewCallbac
         mypresent.getTuiJianTv(TuiJianTvBean.class);
         linearLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
         remen_recyclerview.setLayoutManager(linearLayoutManager);
-
     }
     @Override
     public void getViewDate(Object o) {
         lunBoBean = (LunBoBean) o;
-
-
     }
 
     @Override
