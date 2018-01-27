@@ -78,8 +78,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         listView = findViewById(R.id.list_view);
         switchButton = findViewById(R.id.switch_button);
         imageView_heiye = findViewById(R.id.image_heiye);
-
-
+         cehua_shezhi=findViewById(R.id.cehua_shezhi);
+        cehua_wodezuopin=findViewById(R.id.cehua_wodezuopin);
+        textView=findViewById(R.id.in_title);
     }
 
     @Override
@@ -223,15 +224,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (view.getId()){
             case R.id.radio_duanzi :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_duanzi()).commit();
-
+                textView.setText("段子");
                 break;
             case R.id.radio_shipin :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_shipin()).commit();
-
+                textView.setText("视频");
                 break;
             case R.id.radio_tuijian :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_tuijian()).commit();
-
+                textView.setText("推荐");
                 break;
 
         }

@@ -90,7 +90,7 @@ public class Fragment_duanzi extends BaseFragment implements DView{
     protected void initData() {
         Duanpresenter duanpresenter=new Duanpresenter(this);
         duanpresenter.getliedata();
-        MainActivity.textView.setText("段子");
+
     }
 
     @Override

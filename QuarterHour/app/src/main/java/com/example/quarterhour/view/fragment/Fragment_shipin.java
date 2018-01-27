@@ -46,7 +46,7 @@ public class Fragment_shipin extends BaseFragment {
 
     @Override
     protected void initData() {
-        MainActivity.textView.setText("视频");
+
     }
 
     @Override

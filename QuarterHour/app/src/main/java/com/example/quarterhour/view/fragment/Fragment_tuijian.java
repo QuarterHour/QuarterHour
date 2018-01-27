@@ -47,7 +47,7 @@ public class Fragment_tuijian extends BaseFragment{
 
     @Override
     protected void initData() {
-        MainActivity.textView.setText("推荐");
+
         pageList = new ArrayList<String>();
         pageList.add("热门");
         pageList.add("关注");
