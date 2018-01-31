@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.example.quarterhour.R;
 import com.example.quarterhour.base.BaseFragment;
+import com.example.quarterhour.view.activity.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +47,7 @@ public class Fragment_tuijian extends BaseFragment{
 
     @Override
     protected void initData() {
+
         pageList = new ArrayList<String>();
         pageList.add("热门");
         pageList.add("关注");

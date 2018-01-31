@@ -14,6 +14,7 @@ import com.example.quarterhour.R;
 import com.example.quarterhour.base.BaseFragment;
 import com.example.quarterhour.guo.fragment.GuanFragment;
 import com.example.quarterhour.guo.fragment.ReFragment;
+import com.example.quarterhour.view.activity.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;

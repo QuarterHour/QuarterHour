@@ -13,11 +13,15 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.quarterhour.R;
+import com.example.quarterhour.ZuoPinActivity;
 import com.example.quarterhour.adapter.MyCehuaAdapter;
 import com.example.quarterhour.appliction.Myapplication;
 import com.example.quarterhour.base.BaseActivity;
@@ -44,6 +48,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ListView listView;
     private SwitchButton switchButton;
     private ImageView imageView_heiye;
+    private LinearLayout linearLayout;
+    private LinearLayout cehua_wodezuopin;
+    private LinearLayout cehua_shezhi;
+    public static TextView textView;
 
 
     @Override
@@ -70,8 +78,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         listView = findViewById(R.id.list_view);
         switchButton = findViewById(R.id.switch_button);
         imageView_heiye = findViewById(R.id.image_heiye);
-
-
+         cehua_shezhi=findViewById(R.id.cehua_shezhi);
+        cehua_wodezuopin=findViewById(R.id.cehua_wodezuopin);
+        textView=findViewById(R.id.in_title);
     }
 
     @Override
@@ -136,6 +145,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         //夜间模式
         switchButton.setChecked(Myapplication.isnight);
+
+
         switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(SwitchButton view, boolean isChecked) {
@@ -188,6 +199,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             }
         });
 
+        cehua_shezhi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ShezhiActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cehua_wodezuopin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ZuoPinActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -197,15 +224,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (view.getId()){
             case R.id.radio_duanzi :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_duanzi()).commit();
-
+                textView.setText("段子");
+                //收到
                 break;
             case R.id.radio_shipin :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_shipin()).commit();
-
+                textView.setText("视频");
                 break;
             case R.id.radio_tuijian :
                 getSupportFragmentManager().beginTransaction().replace(R.id.rela, new Fragment_tuijian()).commit();
-
+                textView.setText("推荐");
                 break;
 
         }
@@ -220,4 +248,5 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             super.onBackPressed();
         }
     }
+
 }
