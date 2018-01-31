@@ -32,6 +32,7 @@ public class TuijianAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     TuiJianTvBean tuiJianTvBean;
     public static final int LUNBO = 0;
     public static final int TV = 1;
+    private List<LunBoBean.DataBean> data;
 
     public TuijianAdapter(Context context, LunBoBean lunBoBean, TuiJianTvBean tuiJianTvBean) {
         this.lunBoBean = lunBoBean;
@@ -65,7 +66,7 @@ public class TuijianAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         switch (getItemViewType(position)) {
             case 0:
-                List<LunBoBean.DataBean> data = lunBoBean.getData();
+                data = lunBoBean.getData();
                 ArrayList<String> imageList = new ArrayList<>();
                 for (int i = 0; i < data.size(); i++) {
                     imageList.add(data.get(i).getIcon());

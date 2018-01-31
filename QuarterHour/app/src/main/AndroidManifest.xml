@@ -15,6 +15,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:name=".appliction.Myapplication"
@@ -86,11 +88,22 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <!--分享编辑页-->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a695276b27b0a4f6b0000c2" />
+
+        <activity android:name=".view.activity.QitaLoginActivity" />
         <activity
             android:name="com.umeng.socialize.editorpage.ShareActivity"
             android:excludeFromRecents="true"
             android:theme="@style/Theme.UMDefault"
             />
+            android:name=".guo.model.activity.BoFanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape" -->
+        <activity android:name=".view.activity.DetailsActivity"></activity>
     </application>
 
 </manifest>

@@ -20,30 +20,30 @@ import cn.jzvd.JZVideoPlayerStandard;
 
 public class BoFanActivity extends AppCompatActivity {
 
-private String videoUrl;
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activitybofang );
-        EventBus.getDefault().register( this );
-        JZVideoPlayerStandard jzVideoPlayerStandard = (JZVideoPlayerStandard) findViewById(R.id.videoplayer);
-        jzVideoPlayerStandard.setUp(videoUrl, JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "未成年人禁止观看" );
-        String path="http://i2.hdslb.com/bfs/archive/f925a4fa281ce3c70d5d5ca5c690b0d36895dea8.jpg";
-        Glide.with(this).load(path).into(jzVideoPlayerStandard.thumbImageView);
-    }
+            private String videoUrl;
+            @Override
+            protected void onCreate(@Nullable Bundle savedInstanceState) {
+                super.onCreate( savedInstanceState );
+                setContentView( R.layout.activitybofang );
+                EventBus.getDefault().register( this );
+                JZVideoPlayerStandard jzVideoPlayerStandard = (JZVideoPlayerStandard) findViewById(R.id.videoplayer);
+                jzVideoPlayerStandard.setUp(videoUrl, JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "未成年人禁止观看" );
+                String path="http://i2.hdslb.com/bfs/archive/f925a4fa281ce3c70d5d5ca5c690b0d36895dea8.jpg";
+                Glide.with(this).load(path).into(jzVideoPlayerStandard.thumbImageView);
+            }
 
 
-    @Override
-    public void onBackPressed() {
-        if (JZVideoPlayer.backPress()) {
-            return;
-        }
-        super.onBackPressed();
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        JZVideoPlayer.releaseAllVideos();
+            @Override
+            public void onBackPressed() {
+                if (JZVideoPlayer.backPress()) {
+                    return;
+                }
+                super.onBackPressed();
+            }
+            @Override
+            protected void onPause() {
+                super.onPause();
+                JZVideoPlayer.releaseAllVideos();
     }
 
 
