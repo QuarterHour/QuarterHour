@@ -112,8 +112,6 @@ public class TuiJianTvAdapter extends RecyclerView.Adapter<TuiJianTvAdapter.TuiJ
         TextView tuijiantvNickname;
         @Bind(R.id.tuijiantv_time)
         TextView tuijiantvTime;
-        @Bind(R.id.button)
-        Button button;
         @Bind(R.id.tuijiantv_des)
         TextView tuijiantvDes;
         @Bind(R.id.videoplayer)
