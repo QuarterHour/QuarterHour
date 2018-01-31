@@ -51,7 +51,6 @@ public class TuiJianTvAdapter extends RecyclerView.Adapter<TuiJianTvAdapter.TuiJ
     }
     @Override
     public void onBindViewHolder(TuiJianTvViewHolder holder, final int position) {
-
         String createTime = data1.get(position).getCreateTime();
         String[] ts = createTime.split("T");
         String nickname = data1.get(position).getUser().getNickname();
