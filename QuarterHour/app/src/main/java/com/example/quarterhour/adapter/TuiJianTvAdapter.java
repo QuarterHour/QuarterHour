@@ -1,9 +1,11 @@
 package com.example.quarterhour.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +15,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.quarterhour.R;
 import com.example.quarterhour.model.bean.TuiJianTvBean;
+import com.example.quarterhour.view.activity.DetailsActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 
+import java.io.Serializable;
 import java.util.List;
 
 import butterknife.Bind;
@@ -34,13 +38,19 @@ public class TuiJianTvAdapter extends RecyclerView.Adapter<TuiJianTvAdapter.TuiJ
         this.context = context;
         this.data1 = data1;
     }
+
+
+
+    public TuiJianTvAdapter(DetailsActivity detailsActivity) {
+    }
+
     @Override
     public TuiJianTvViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.tuijiantvitem, parent, false);
         return new TuiJianTvViewHolder(view);
     }
     @Override
-    public void onBindViewHolder(TuiJianTvViewHolder holder, int position) {
+    public void onBindViewHolder(TuiJianTvViewHolder holder, final int position) {
 
         String createTime = data1.get(position).getCreateTime();
         String[] ts = createTime.split("T");
@@ -85,11 +95,13 @@ public class TuiJianTvAdapter extends RecyclerView.Adapter<TuiJianTvAdapter.TuiJ
         holder.videoplayer.setUp(videoUrl, JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "未成年人禁止观看");
         String path="http://i2.hdslb.com/bfs/archive/f925a4fa281ce3c70d5d5ca5c690b0d36895dea8.jpg";
         Glide.with(context).load(path).into(holder.videoplayer.thumbImageView);
-        holder.videoplayer.setOnClickListener(new View.OnClickListener() {
+        holder.tuijiantvTouxiang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                Intent intent=new Intent(context, DetailsActivity.class);
+                intent.putExtra("databean", (Serializable) data1);
+                intent.putExtra("iamge",icon);
+                context.startActivity(intent);
             }
         });
     }

@@ -4,7 +4,6 @@ package com.example.quarterhour.present;
 import com.example.quarterhour.model.Mymodel;
 import com.example.quarterhour.model.bean.LunBoBean;
 import com.example.quarterhour.model.bean.TuiJianTvBean;
-import com.example.quarterhour.view.fragment.FragmentTuijian_guanzhu;
 import com.example.quarterhour.view.fragment.FragmentTuijian_remen;
 
 public class Mypresent<T>{
