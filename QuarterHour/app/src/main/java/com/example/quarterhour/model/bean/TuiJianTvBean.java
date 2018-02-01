@@ -1,12 +1,13 @@
 package com.example.quarterhour.model.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by acer on 2018/1/25.
  */
 
-public class TuiJianTvBean {
+public class TuiJianTvBean implements Serializable{
 
     /**
      * msg : 获取作品列表成功
@@ -42,7 +43,7 @@ public class TuiJianTvBean {
         this.data = data;
     }
 
-    public static class DataBean {
+    public static class DataBean implements Serializable{
         /**
          * commentNum : 0
          * comments : []
@@ -197,7 +198,7 @@ public class TuiJianTvBean {
             this.comments = comments;
         }
 
-        public static class UserBean {
+        public static class UserBean implements Serializable{
             /**
              * age : null
              * fans : null

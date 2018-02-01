@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:paddingLeft="10dp"
+
             >
         <TextView
             android:id="@+id/tuijiantv_nickname"
@@ -40,17 +41,18 @@
                 android:paddingBottom="20dp"
                 android:text="2018-01-26 08:00"/>
         </RelativeLayout>
-        <Button
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:text="按钮"
-            />
+       <com.example.quarterhour.CustomerView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/customview"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="20dp"
+           android:layout_marginTop="10dp"
+           ></com.example.quarterhour.CustomerView>
     </RelativeLayout>
     <TextView
          android:id="@+id/tuijiantv_des"
-         android:layout_width="match_parent"
+         android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="心怀不惧 方能翱翔于天下"
         android:textColor="#000"
