@@ -3,9 +3,11 @@ package com.example.quarterhour.utils;
 import android.util.Log;
 
 import com.example.quarterhour.appliction.Myapplication;
+import com.example.quarterhour.base.ZhuCeBean;
 import com.example.quarterhour.model.MyModelCallback;
 import com.google.gson.Gson;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -16,7 +18,6 @@ import io.reactivex.functions.Function;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 /**
  * Created by 0.0 on 2018/1/22.
  */
@@ -40,7 +41,6 @@ public class InternetUtil<T>{
     }
 
     public void getData(final Class<T> a, final MyModelCallback myModelCallback){
-
 
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override

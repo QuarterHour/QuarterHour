@@ -28,7 +28,10 @@ public class Myapplication extends Application{
         super.onCreate();
         Fresco.initialize(this);
 
+        //默认白天模式
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://www.zhaoapi.cn/")
 //                .addConverterFactory(GsonConverterFactory.create())

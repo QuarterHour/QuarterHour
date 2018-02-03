@@ -18,11 +18,14 @@ import retrofit2.http.Url;
  */
 
 
-    public interface IInterface{
+public interface IInterface {
 
-        @GET("quarter/getAd")
-         Call<String> get();
-      @GET
-      Call<String> getAll(@Url String url, @QueryMap Map<String,String> map);
+    @GET("quarter/getAd")
+    Call<String> get();
+
+    @GET
+    Call<String> getAll(@Url String url, @QueryMap Map<String, String> map);
+
+
 }
 

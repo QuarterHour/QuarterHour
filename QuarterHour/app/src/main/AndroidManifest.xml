@@ -57,24 +57,13 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <!--新浪微博-->
-        <activity
-            android:name=".WBShareActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <!--qq精简版-->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.umeng.qq.tencent.AuthActivity"
             android:launchMode="singleTask"
             android:noHistory="true">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
@@ -86,8 +75,6 @@
             android:name="com.umeng.qq.tencent.AssistActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <!--分享编辑页-->
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <meta-data
@@ -96,14 +83,9 @@
 
         <activity android:name=".view.activity.QitaLoginActivity" />
         <activity
-            android:name="com.umeng.socialize.editorpage.ShareActivity"
-            android:excludeFromRecents="true"
-            android:theme="@style/Theme.UMDefault"
-            />
             android:name=".guo.model.activity.BoFanActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape" -->
-        <activity android:name=".view.activity.DetailsActivity"></activity>
+            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape"-->
     </application>
 
 </manifest>
